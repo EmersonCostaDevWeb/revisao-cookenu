@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Cookenu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Revisão React II<br>
+O código desse repositório é apenas um template do create-react-app limpo e servirá como ponto inicial para a revisão.
 
-## Available Scripts
+## Introdução
 
-In the project directory, you can run:
+Estudamos inúmeros conceitos e ferramentas do React ao longo dos últimos meses e finalmente chegamos no fim do front-end! É normal o conteúdo ainda estar nebuloso na cabeça, então faremos uma dinâmica de revisão implementando do zero um aplicativo com tudo que foi visto no curso.
 
-### `npm start`
+Esse projeto não substitui outras atividades obrigatórias e deve ser referenciado apenas como um material extra de revisão.<br>
+Apesar de não esperarmos entregas do mesmo, é recomendado que ele seja desenvolvido para facilitar o entendimento da matéria.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Resumo do aplicativo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O Cookenu é uma rede social onde as pessoas podem compartilhar suas receitas culinárias.<br>
+Para utilizar o site é necessário criar uma conta, não sendo possível visualizar nem criar receitas sem antes ter feito o login.
 
-### `npm test`
+## API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A API possui um mecanismo de economia de recursos automático: caso ela não seja utilizada por 15 minutos o serviço é desligado.<br>
+Isso faz com que a primeira requisição após 15 minutos demande mais tempo para ser respondida, pois o serviço precisa ser reiniciado.<br>
+Esse processo leva em torno de 20 a 30 segundos, então levem isso em consideração quando estiverem se integrando com ela.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://documenter.getpostman.com/view/21151478/2s8YzMZRju#intro
