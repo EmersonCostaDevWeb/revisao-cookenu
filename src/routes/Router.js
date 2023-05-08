@@ -6,16 +6,18 @@ import { LoginPage } from "../pages/login/LoginPage"
 import { SignupPage } from "../pages/signup/SignupPage"
 import {FeedPage} from "../pages/feed/FeedPage"
 import {Header} from "../components/Header/Header"
+
 export const Router = () => {
+
     return (
         <div>
             <BrowserRouter>
             <Header/>
                 <Routes>
+                    <Route path="/" element={<FeedPage/>} />
                     <Route path="/login" element={<LoginPage/>} />
                     <Route path="/signup" element={<SignupPage/>} />
-                    <Route path="/" element={<FeedPage/>} />
-                    <Route path="/details/:id" element={<DetailsPage/>} />
+                    <Route path="/details:id" element={<DetailsPage/>} />
                     <Route path="/addrecipe" element={<AddRecipe/>} />
                 </Routes>
             </BrowserRouter>

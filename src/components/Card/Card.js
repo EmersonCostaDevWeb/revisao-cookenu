@@ -22,8 +22,8 @@ export default function RecipeCard() {
                         </Text>
                     </Stack>
                 </CardBody>
+               
             </Card>
         </CardContainer>
-
     )
 }

@@ -16,24 +16,26 @@ export const LoginPage = () => {
         const { name, value } = event.target
         setForm({ ...form, [name]: value })
         console.log(form)
-        axios.post(`${BASE_URL}/user/login`, form)
-            .then((resp) => {
-                console.log(resp.data.token);
-                localStorage.setItem('token', resp.data.token)
-               gotoFeedPage(navigate)
-                
-            })
-            .catch((error) => {
-                console.log(error.response.data.message);
-            })
+
     }
-    const onSubmitvalue = (event) => {
+
+    const onSubmitvalue = async (event) => {
         event.preventDefault()
         console.log(form)
+        try {
+            const resp = await axios.post(`${BASE_URL}/user/login`, form)
+            console.log(resp.data);
+            localStorage.setItem('token', resp.data.token)
+            gotoFeedPage(navigate)
+        }
+        catch (error) {
+            console.log(error.response.data.message)
+        }
+
     }
     return (
         <CenterPageContainer>
-            <FormContainer onSubmit={()=>onSubmitvalue}>
+            <FormContainer onSubmit={onSubmitvalue}>
 
                 <Input name="email"
                     value={form.email}
@@ -52,13 +54,13 @@ export const LoginPage = () => {
 
                 <Button type="submit"
                     colorScheme="orange" >
-                    Login 
+                    Login
                 </Button>
                 <Button type="button"
                     colorScheme="orange"
                     variant="ghost"
                     size="5%"
-                    onClick={()=>gotoSignupPage(navigate)}>
+                    onClick={() => gotoSignupPage(navigate)}>
                     Não possui cadastro? Cadastre-se
                 </Button>
 
