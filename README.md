@@ -22,3 +22,6 @@ Isso faz com que a primeira requisição após 15 minutos demande mais tempo par
 Esse processo leva em torno de 20 a 30 segundos, então levem isso em consideração quando estiverem se integrando com ela.
 
 https://documenter.getpostman.com/view/21151478/2s8YzMZRju#intro
+
+## Link da Aplicação
+<a target="_blank" href="https://cookenu-d.surge.sh">Cookenu</a>
